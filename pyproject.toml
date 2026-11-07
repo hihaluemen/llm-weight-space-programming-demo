@@ -1,0 +1,19 @@
+[project]
+name = "weight-space"
+version = "0.1.0"
+description = "LLM (DeepSeek) programs the weights of tiny LSTMs directly; compare with gradient-trained baselines."
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.4.6",
+    "openai>=3.46.0",
+    "torch",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
